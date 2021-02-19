@@ -13,7 +13,7 @@
 
 
 ## Server
-- [] import 6 personal photos
+- [x] import 6+ personal photos
 - [] GET endpoint
 - [] PUT endpoint
 
