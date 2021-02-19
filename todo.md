@@ -14,6 +14,7 @@
 
 ## Server
 - [x] import 6+ personal photos
+- [] Test given endpoints in Postman
 - [] GET endpoint
 - [] PUT endpoint
 
