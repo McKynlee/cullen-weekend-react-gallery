@@ -1,24 +1,4 @@
-.App {
-  text-align: center;
-}
-
-.App-header {
-  background-color: #222;
-  padding: 1em;
-  color: white;
-  margin-bottom: 1em;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-img {
-  width: 80%;
-  height: auto;
-}
-
-.container {
+/* .container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));
@@ -33,4 +13,4 @@ img {
 .right-column {
 background-color: blueviolet;
 grid-column: 2/3;
-}
+} */
