@@ -1,4 +1,4 @@
-// Received "React not in scope" error, fixing:
+// Fixing "React not in scope" error:
 import React from 'react';
 
 
@@ -35,7 +35,6 @@ function GalleryItem({ photo, updateLikes }) {
         ) : (
             <DisplayDescription photo={photo} />
           )}
-        <img src={photo.path} alt={photo.description} />
       </div>
       <div>
         <button onClick={() => {
