@@ -1,36 +1,49 @@
 .App {
   text-align: center;
+  margin: 0px;
 }
 
 .App-header {
   background-color: #222;
   padding: 1em;
   color: white;
-  margin-bottom: 1em;
 }
 
 .App-title {
   font-size: 1.5em;
 }
 
-img {
-  width: 80%;
-  height: auto;
-}
-
 .container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));
-  grid-gap: 10px;
+  grid-gap: 1px;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  max-width: 200px;
+  max-height: 200px;
+  padding: 10px;
+  border: 3px dotted blueviolet;
+  border-radius: 10px;
 }
 
 .item-left-column {
   background-color: aquamarine;
   grid-column: 1/2;
+  padding: 30px;
 }
 
 .item-right-column {
 background-color: blueviolet;
 grid-column: 2/3;
+padding: 30px;
+border: 3px dotted aquamarine;
 }
+
+/* .display-center {
+  justify-content: center;
+  align-items: center;
+} */
