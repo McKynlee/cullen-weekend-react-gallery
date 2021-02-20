@@ -1,7 +1,7 @@
 const galleryItems = [
   {
-    id: 1, path: 'images/goat_small.jpg',
-    description: 'Photo of a goat taken at Glacier National Park.',
+    id: 9, path: 'images/sardinia.jpg',
+    description: 'Photo of a trekking/camping trip I did with my weird friends in Sardinia :)',
     likes: 0
   },
   {
@@ -39,11 +39,6 @@ const galleryItems = [
     description: 'Photo of my college softball teammates as our team captain married my brother!',
     likes: 0
   },
-  {
-    id: 9, path: 'images/sardinia.jpg',
-    description: 'Photo of a trekking/camping trip I did with my weird friends in Sardinia :)',
-    likes: 0
-  }
 ];
 
 module.exports = galleryItems;
