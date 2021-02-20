@@ -6,6 +6,7 @@ import './App.css';
 
 // Import components:
 import GalleryList from '../GalleryList/GalleryList';
+import axios from 'axios';
 
 function App() {
   const [galleryList, setGalleryList] = useState([]);
@@ -28,13 +29,25 @@ function App() {
       })
   } //end getGallery
 
+  const updateLikes = (galleryId) => {
+    axios.put(`/gallery/like/${galleryId}`)
+      .then(response => {
+        console.log('PUT response:', response);
+        getGallery();
+      })
+      .catch(error => {
+        console.log('error updating likes', error);
+      })
+  } //end updateLikes
+
   return (
     <div className="App">
       <header className="App-header">
         <h1 className="App-title">Gallery of My Life</h1>
       </header>
       <GalleryList
-        galleryList={galleryList} />
+        galleryList={galleryList}
+        updateLikes={updateLikes} />
     </div>
   );
 }

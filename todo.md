@@ -9,8 +9,8 @@
 - [x] Create GalleryItems to send single image rendering to GalleryList.
 ---------- [] click image to toggle btwn image and description (conditional rendering)
 ---------- [x] Like button
----------- [] Accumulate likes (useState)
----------- [] Axios PUT the like count /gallery/like/:id
+---------- [x] Accumulate likes (useState)
+---------- [x] Axios PUT the like count /gallery/like/:id
 ---------- [] Update gallery each time smthg is liked
 
 
