@@ -1,9 +1,11 @@
 // Received "React not in scope" error, fixing:
 import React from 'react';
 
-function DisplayPhoto() {
+function DisplayPhoto({ photo }) {
   return (
-    <div>Test Photo</div>
+    <div>
+      <img src={photo.path} alt={photo.description} />
+    </div>
   )
 }
 
