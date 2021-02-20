@@ -14,9 +14,9 @@
 
 ## Server
 - [x] import 6+ personal photos
-- [] Test given endpoints in Postman
-- [] GET endpoint
-- [] PUT endpoint
+- [x] Test given endpoints in Postman
+- [x] GET endpoint
+- [x] PUT endpoint
 
 ## STRETCH
 - [] Use git branching
