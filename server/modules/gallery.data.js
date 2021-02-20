@@ -1,6 +1,6 @@
 const galleryItems = [
   {
-    id: 9, path: 'images/sardinia.jpg',
+    id: 1, path: 'images/sardinia.jpg',
     description: 'Photo of a trekking/camping trip I did with my weird friends in Sardinia :)',
     likes: 0
   },

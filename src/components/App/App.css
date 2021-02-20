@@ -25,12 +25,12 @@ img {
   grid-gap: 10px;
 }
 
-.left-column {
+.item-left-column {
   background-color: aquamarine;
   grid-column: 1/2;
 }
 
-.right-column {
+.item-right-column {
 background-color: blueviolet;
 grid-column: 2/3;
 }
