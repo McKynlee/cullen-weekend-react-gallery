@@ -1,14 +1,13 @@
 import './GalleryItem.css';
 
 function GalleryItem({ photo }) {
-  // let idEven;
-  // if({photo.id} % 2 === 0) {
-  // idEven = 'right-column';
-  //}
-  // className="idEven"
+  let idEven = "left-column";
+  if (photo.id % 2 === 0) {
+    idEven = "right-column";
+  }
 
   return (
-    <div>
+    <div className={idEven}>
       <img src={photo.path} />
     </div>
   );
