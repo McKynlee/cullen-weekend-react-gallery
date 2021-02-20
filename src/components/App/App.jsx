@@ -1,5 +1,6 @@
 import Axios from 'axios';
 import React from 'react';
+
 import { useState, useEffect } from 'react';
 import './App.css';
 
@@ -8,6 +9,7 @@ import GalleryList from '../GalleryList/GalleryList';
 
 function App() {
   const [galleryList, setGalleryList] = useState([]);
+
 
   // On page load, load gallery images:
   useEffect(() => {
@@ -31,7 +33,8 @@ function App() {
       <header className="App-header">
         <h1 className="App-title">Gallery of My Life</h1>
       </header>
-      <GalleryList galleryList={galleryList} />
+      <GalleryList
+        galleryList={galleryList} />
     </div>
   );
 }
