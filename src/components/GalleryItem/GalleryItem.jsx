@@ -8,7 +8,7 @@ import DisplayPhoto from '../Display/DisplayPhoto';
 import DisplayDescription from '../Display/DisplayDescription';
 
 function GalleryItem({ photo, updateLikes }) {
-  const [likes, setLikes] = useState(0);
+  // const [likes, setLikes] = useState(0);
   const [photoDisplay, setPhotoDisplay] = useState(true);
 
   let heart = '<3';
@@ -38,10 +38,10 @@ function GalleryItem({ photo, updateLikes }) {
       </div>
       <div>
         <button onClick={() => {
-          setLikes(likes + 1);
+          // setLikes(likes + 1);
           updateLikes(photo.id, photo.likes);
         }} >
-          {heart} Likes: {likes}
+          {heart} Likes: {photo.likes}
         </button>
       </div >
     </div >
