@@ -43,7 +43,14 @@ padding: 30px;
 border: 3px dotted aquamarine;
 }
 
-/* .display-center {
-  justify-content: center;
-  align-items: center;
-} */
+.button {
+  border-radius: 5px;
+}
+
+.item-like-btn {
+  background-color: green;
+}
+
+.item-delete-btn {
+  background-color: red;
+}

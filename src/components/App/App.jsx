@@ -65,6 +65,20 @@ function App() {
       })
   } //end updateLikes
 
+  const deleteFromGallery = (photoId) => {
+    console.log('deleteFromGallery ID:', photoId);
+
+    axios.delete(`/gallery/delete/${photoId}`)
+      .then(response => {
+        console.log('Item successfully deleted!', response);
+        getGallery();
+      })
+      .catch(error => {
+        console.log('error deleting item:', error);
+        alert('Error deleting item.')
+      })
+  } // end DELETE
+
   return (
     <div className="App">
       <header className="App-header">
@@ -79,7 +93,9 @@ function App() {
       />
       <GalleryList
         galleryList={galleryList}
-        updateLikes={updateLikes} />
+        updateLikes={updateLikes}
+        deleteFromGallery={deleteFromGallery}
+      />
     </div>
   );
 }

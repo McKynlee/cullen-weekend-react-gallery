@@ -65,7 +65,23 @@ router.put('/like/:id/:likes', (req, res) => {
     })
 }); // END PUT Route
 
+// DELETE Route
+router.delete('/delete/:id', (req, res) => {
+  let idToDelete = req.params.id;
 
+  let sqlScript = `DELETE FROM "gallery" 
+  WHERE "id"=$1;`;
+
+  pool.query(sqlScript, [idToDelete])
+    .then(dbRes => {
+      console.log('Deleted item', dbRes);
+      res.sendStatus(200);
+    })
+    .catch(error => {
+      console.log('Error deleting:', error);
+      res.sendStatus(500);
+    })
+})
 
 
 

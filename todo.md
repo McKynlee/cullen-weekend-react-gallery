@@ -29,14 +29,18 @@
 -----[x] Write pool.query for put endpoints
 -----[x] GET likes from db
 
-- [] feature-form: create form that allows user to POST new gallery item (use absolute URL for img) 
+- [x] feature-form: create form that allows user to POST new gallery item (use absolute URL for img) 
 -----[x] FormComponent
 -----[x] text input, img input, submit
 -----[x] Axios POST
------[] Router + Pool POST
------[] Update DOM with new item
+-----[x] Router + Pool POST
+-----[x] Update DOM with new item
 
-- [] feature-delete: add ability to delete item (add button rendering to GalleryItems)
+- [] feature-delete: add ability to delete item 
+-----[x] Button
+-----[x] Delete function called on click
+-----[x] Axios DELETE
+-----[] Router + Pool DELETE
 
 - [] Material UI styling
 - [] Implement uppy for image upload
