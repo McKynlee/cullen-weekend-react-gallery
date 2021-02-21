@@ -52,17 +52,11 @@ function GalleryItem({ photo, updateLikes, deleteFromGallery }) {
         <Button
           variant="contained"
           color="secondary"
-          // className={classes.button}
-          // startIcon={<DeleteIcon />}
           key={photo.id}
           onClick={() => deleteFromGallery(photo.id)}
         >
           DELETE
         </Button>
-        {/* <button className="item-delete-btn button"
-          >
-          DELETE from Gallery
-        </button> */}
       </div >
     </div >
   );
