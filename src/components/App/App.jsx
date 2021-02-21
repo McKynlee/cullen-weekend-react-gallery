@@ -31,6 +31,12 @@ function App() {
       })
   } //end getGallery
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    console.log('in handleSubmit');
+  } //end handleSubmit
+
   const updateLikes = (galleryId, photoLikes) => {
     axios.put(`/gallery/like/${galleryId}/${photoLikes}`)
       .then(response => {
@@ -52,6 +58,7 @@ function App() {
         setNewGalleryItem={setNewGalleryItem}
         newGalleryURL={newGalleryURL}
         setNewGalleryURL={setNewGalleryURL}
+        handleSubmit={handleSubmit}
       />
       <GalleryList
         galleryList={galleryList}

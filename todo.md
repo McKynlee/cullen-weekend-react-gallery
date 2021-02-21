@@ -30,7 +30,7 @@
 -----[x] GET likes from db
 
 - [] feature-form: create form that allows user to POST new gallery item (use absolute URL for img) 
------[] FormComponent
+-----[x] FormComponent
 -----[] text input, img input, submit
 -----[] Axios POST
 -----[] Router + Pool POST

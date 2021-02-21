@@ -4,9 +4,17 @@ import React from 'react';
 function GalleryForm({ newGalleryItem,
   setNewGalleryItem,
   newGalleryURL,
-  setNewGalleryURL }) {
+  setNewGalleryURL,
+  handleSubmit
+}) {
   return (
-    <div>Testing FORM</div>
+    <div>Testing FORM
+      <form onSubmit={handleSubmit}>
+        <label>Text description of photo:<input type="text" /></label>
+        <label>Photo absolute URL:<input type="text" /></label>
+        <button>SUBMIT</button>
+      </form>
+    </div>
   );
 } // end GalleryForm
 
