@@ -22,7 +22,11 @@
 
 ## STRETCH
 - [] Use git branching
-- [] feature-db: move your data into react_gallery db and include database.sql file
+- [] feature-db: 
+-----[x] move your data into react_gallery db and include database.sql file
+-----[x] create pool.js to bring in db
+-----[x] Write pool.query for get endpoints
+-----[] Write pool.query for put endpoints
 - [] feature-form: create form that allows user to POST new gallery item (use absolute URL for img) 
 - [] feature-delete: add ability to delete item (add button rendering to GalleryItems)
 - [] Material UI styling
