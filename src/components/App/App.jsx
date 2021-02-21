@@ -67,7 +67,17 @@ function App() {
 
   const deleteFromGallery = (photoId) => {
     console.log('deleteFromGallery ID:', photoId);
-  }
+
+    axios.delete(`/gallery/delete/${photoId}`)
+      .then(response => {
+        console.log('Item successfully deleted!', response);
+        getGallery();
+      })
+      .catch(error => {
+        console.log('error deleting item:', error);
+        alert('Error deleting item.')
+      })
+  } // end DELETE
 
   return (
     <div className="App">
