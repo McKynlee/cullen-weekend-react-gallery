@@ -30,6 +30,11 @@
 -----[x] GET likes from db
 
 - [] feature-form: create form that allows user to POST new gallery item (use absolute URL for img) 
+-----[x] FormComponent
+-----[x] text input, img input, submit
+-----[x] Axios POST
+-----[] Router + Pool POST
+-----[] Update DOM with new item
 
 - [] feature-delete: add ability to delete item (add button rendering to GalleryItems)
 
