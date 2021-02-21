@@ -7,7 +7,10 @@ import DisplayPhoto from '../Display/DisplayPhoto';
 import DisplayDescription from '../Display/DisplayDescription';
 
 // Material-UI
-import Button from '@material-ui/core/Button';
+import {
+  Button,
+  Grid,
+} from '@material-ui/core';
 // import DeleteIcon from '@material-ui/icons/Delete';
 
 function GalleryItem({ photo, updateLikes, deleteFromGallery }) {
@@ -29,8 +32,8 @@ function GalleryItem({ photo, updateLikes, deleteFromGallery }) {
   } //end handlePhotoDisplay
 
   return (
-    <div className={idEven}>
-      <div onClick={() => {
+    <Grid item xs={6} className={idEven} >
+      <Grid item xs={8} onClick={() => {
         handlePhotoDisplay()
       }}>
         {photoDisplay ? (
@@ -38,27 +41,34 @@ function GalleryItem({ photo, updateLikes, deleteFromGallery }) {
         ) : (
             <DisplayDescription photo={photo} />
           )}
-      </div>
-      <div>
-        <Button
-          variant="contained"
-          color="primary"
-          onClick={() => {
-            updateLikes(photo.id, photo.likes);
-          }}
-        >
-          {heart} Likes: {photo.likes}
-        </Button>
-        <Button
-          variant="contained"
-          color="secondary"
-          key={photo.id}
-          onClick={() => deleteFromGallery(photo.id)}
-        >
-          DELETE
-        </Button>
-      </div >
-    </div >
+      </Grid >
+      <Grid container
+        justify="space-around"
+        alignItems="flex-end"
+      >
+        <Grid item xs={4} >
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={() => {
+              updateLikes(photo.id, photo.likes);
+            }}
+          >
+            {heart} Likes: {photo.likes}
+          </Button>
+        </Grid >
+        <Grid item xs={4} >
+          <Button
+            variant="contained"
+            color="secondary"
+            key={photo.id}
+            onClick={() => deleteFromGallery(photo.id)}
+          >
+            DELETE
+          </Button>
+        </Grid>
+      </Grid >
+    </Grid>
   );
 } // end GalleryItem
 

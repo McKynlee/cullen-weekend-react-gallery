@@ -1,11 +1,20 @@
 // Received "React not in scope" error, fixing:
 import React from 'react';
 
+// Material-UI
+import {
+  Grid,
+} from '@material-ui/core';
+
 import GalleryItem from '../GalleryItem/GalleryItem';
 
 function GalleryList({ galleryList, updateLikes, deleteFromGallery }) {
   return (
-    <div className="container">
+    <Grid container
+      spacing={2}
+      alignItems="flex-start"
+      justify="center"
+    >
       {galleryList.map(photo => {
         return <GalleryItem
           key={photo.id}
@@ -14,7 +23,7 @@ function GalleryList({ galleryList, updateLikes, deleteFromGallery }) {
           deleteFromGallery={deleteFromGallery}
         />
       })}
-    </div>
+    </Grid>
   );
 }
 

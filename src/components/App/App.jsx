@@ -4,6 +4,11 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import './App.css';
 
+// Material-UI
+import {
+  Grid,
+} from '@material-ui/core';
+
 // Import components:
 import GalleryList from '../GalleryList/GalleryList';
 import GalleryForm from '../GalleryForm/GalleryForm';
@@ -84,19 +89,25 @@ function App() {
       <header className="App-header">
         <h1 className="App-title">Gallery of My Life</h1>
       </header>
-      <GalleryForm
-        newPhotoDescription={newPhotoDescription}
-        setNewPhotoDescription={setNewPhotoDescription}
-        newPhotoURL={newPhotoURL}
-        setNewPhotoURL={setNewPhotoURL}
-        handleSubmit={handleSubmit}
-      />
-      <GalleryList
-        galleryList={galleryList}
-        updateLikes={updateLikes}
-        deleteFromGallery={deleteFromGallery}
-      />
-    </div>
+      <Grid container>
+        <Grid item xs={12} >
+          <GalleryForm
+            newPhotoDescription={newPhotoDescription}
+            setNewPhotoDescription={setNewPhotoDescription}
+            newPhotoURL={newPhotoURL}
+            setNewPhotoURL={setNewPhotoURL}
+            handleSubmit={handleSubmit}
+          />
+        </Grid>
+        <Grid item xs={12} >
+          <GalleryList
+            galleryList={galleryList}
+            updateLikes={updateLikes}
+            deleteFromGallery={deleteFromGallery}
+          />
+        </Grid>
+      </Grid >
+    </div >
   );
 }
 
