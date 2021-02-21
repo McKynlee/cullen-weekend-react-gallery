@@ -31,8 +31,8 @@
 
 - [] feature-form: create form that allows user to POST new gallery item (use absolute URL for img) 
 -----[x] FormComponent
------[] text input, img input, submit
------[] Axios POST
+-----[x] text input, img input, submit
+-----[x] Axios POST
 -----[] Router + Pool POST
 -----[] Update DOM with new item
 
