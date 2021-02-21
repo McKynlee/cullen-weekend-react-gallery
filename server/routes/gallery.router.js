@@ -21,7 +21,24 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
   console.log('req.body:', req.body);
 
-})
+  const sqlScript = `INSERT INTO "gallery"
+  ("path", "description", "likes")
+  VALUES
+  ($1, $2, $3);`;
+
+  pool.query(sqlScript,
+    [req.body.path,
+    req.body.description,
+    req.body.likes])
+    .then(dbRes => {
+      console.log('dbRes POST:', dbRes);
+      res.sendStatus(200);
+    })
+    .catch(error => {
+      console.log('POST error:', sqlScript, error);
+      res.sendStatus(500);
+    })
+}) // end POST
 
 // PUT Route
 router.put('/like/:id/:likes', (req, res) => {
