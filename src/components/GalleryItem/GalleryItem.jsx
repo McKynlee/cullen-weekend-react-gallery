@@ -6,6 +6,18 @@ import { useState } from 'react';
 import DisplayPhoto from '../Display/DisplayPhoto';
 import DisplayDescription from '../Display/DisplayDescription';
 
+// Material-UI
+import Button from '@material-ui/core/Button';
+// import { makeStyles } from '@material-ui/core/styles';
+// import DeleteIcon from '@material-ui/icons/Delete';
+
+// Material-UI variables:
+// const useStyles = makeStyles((theme) => ({
+//   button: {
+//     margin: theme.spacing(1),
+//   },
+// }));
+
 function GalleryItem({ photo, updateLikes, deleteFromGallery }) {
   // const [likes, setLikes] = useState(0);
   const [photoDisplay, setPhotoDisplay] = useState(true);
@@ -43,11 +55,20 @@ function GalleryItem({ photo, updateLikes, deleteFromGallery }) {
           }} >
           {heart} Likes: {photo.likes}
         </button>
-        <button className="item-delete-btn button"
+        <Button
+          variant="contained"
+          color="secondary"
+          // className={classes.button}
+          // startIcon={<DeleteIcon />}
           key={photo.id}
-          onClick={() => deleteFromGallery(photo.id)}>
+          onClick={() => deleteFromGallery(photo.id)}
+        >
+          DELETE
+        </Button>
+        {/* <button className="item-delete-btn button"
+          >
           DELETE from Gallery
-        </button>
+        </button> */}
       </div >
     </div >
   );
