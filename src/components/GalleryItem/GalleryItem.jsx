@@ -3,11 +3,10 @@ import React from 'react';
 
 
 import { useState } from 'react';
-import './GalleryItem.css';
 import DisplayPhoto from '../Display/DisplayPhoto';
 import DisplayDescription from '../Display/DisplayDescription';
 
-function GalleryItem({ photo, updateLikes }) {
+function GalleryItem({ photo, updateLikes, deleteFromGallery }) {
   // const [likes, setLikes] = useState(0);
   const [photoDisplay, setPhotoDisplay] = useState(true);
 
@@ -37,11 +36,17 @@ function GalleryItem({ photo, updateLikes }) {
           )}
       </div>
       <div>
-        <button onClick={() => {
-          // setLikes(likes + 1);
-          updateLikes(photo.id, photo.likes);
-        }} >
+        <button className="item-like-btn button"
+          onClick={() => {
+            // setLikes(likes + 1);
+            updateLikes(photo.id, photo.likes);
+          }} >
           {heart} Likes: {photo.likes}
+        </button>
+        <button className="item-delete-btn button"
+          key={photo.id}
+          onClick={() => deleteFromGallery(photo.id)}>
+          DELETE from Gallery
         </button>
       </div >
     </div >

@@ -3,7 +3,7 @@ import React from 'react';
 
 import GalleryItem from '../GalleryItem/GalleryItem';
 
-function GalleryList({ galleryList, updateLikes }) {
+function GalleryList({ galleryList, updateLikes, deleteFromGallery }) {
   return (
     <div className="container">
       {galleryList.map(photo => {
@@ -11,6 +11,7 @@ function GalleryList({ galleryList, updateLikes }) {
           key={photo.id}
           photo={photo}
           updateLikes={updateLikes}
+          deleteFromGallery={deleteFromGallery}
         />
       })}
     </div>

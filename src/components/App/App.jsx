@@ -65,6 +65,10 @@ function App() {
       })
   } //end updateLikes
 
+  const deleteFromGallery = (photoId) => {
+    console.log('deleteFromGallery ID:', photoId);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -79,7 +83,9 @@ function App() {
       />
       <GalleryList
         galleryList={galleryList}
-        updateLikes={updateLikes} />
+        updateLikes={updateLikes}
+        deleteFromGallery={deleteFromGallery}
+      />
     </div>
   );
 }
