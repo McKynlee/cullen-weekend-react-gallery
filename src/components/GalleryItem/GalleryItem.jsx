@@ -39,7 +39,7 @@ function GalleryItem({ photo, updateLikes }) {
       <div>
         <button onClick={() => {
           setLikes(likes + 1);
-          updateLikes(photo.id);
+          updateLikes(photo.id, photo.likes);
         }} >
           {heart} Likes: {likes}
         </button>

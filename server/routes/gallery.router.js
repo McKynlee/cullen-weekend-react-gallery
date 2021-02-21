@@ -6,15 +6,33 @@ const pool = require('../modules/pool');
 // DO NOT MODIFY THIS FILE FOR BASE MODE
 
 // PUT Route
-router.put('/like/:id', (req, res) => {
-  console.log(req.params);
+router.put('/like/:id/:likes', (req, res) => {
+  console.log('req.params:', req.params);
+  console.log('req.body:', req.body);
+
   const galleryId = req.params.id;
-  for (const galleryItem of galleryItems) {
-    if (galleryItem.id == galleryId) {
-      galleryItem.likes += 1;
-    }
-  }
-  res.sendStatus(200);
+  const newGalleryLikes = Number(req.params.likes + 1);
+
+  let sqlScript = `UPDATE "gallery"
+  SET "likes" = ${Number(newGalleryLikes)}
+  WHERE "id" = $1;`;
+
+  // for (const galleryItem of galleryItems) {
+  //   if (galleryItem.id == galleryId) {
+  //     galleryItem.likes += 1;
+  //   }
+  // }
+
+
+  pool.query(sqlScript, [galleryId])
+    .then(dbRes => {
+      console.log('dbRes for PUT:', dbRes);
+      res.sendStatus(200);
+    })
+    .catch(error => {
+      console.log('Error updating likes:', sqlScript, error);
+      res.sendStatus(500);
+    })
 }); // END PUT Route
 
 // GET Route
