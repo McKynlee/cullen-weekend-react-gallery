@@ -6,11 +6,13 @@ import './App.css';
 
 // Import components:
 import GalleryList from '../GalleryList/GalleryList';
+import GalleryForm from '../GalleryForm/GalleryForm';
 import axios from 'axios';
 
 function App() {
   const [galleryList, setGalleryList] = useState([]);
-
+  const [newGalleryItem, setNewGalleryItem] = useState('');
+  const [newGalleryURL, setNewGalleryURL] = useState('');
 
   // On page load, load gallery images:
   useEffect(() => {
@@ -45,6 +47,12 @@ function App() {
       <header className="App-header">
         <h1 className="App-title">Gallery of My Life</h1>
       </header>
+      <GalleryForm
+        newGalleryItem={newGalleryItem}
+        setNewGalleryItem={setNewGalleryItem}
+        newGalleryURL={newGalleryURL}
+        setNewGalleryURL={setNewGalleryURL}
+      />
       <GalleryList
         galleryList={galleryList}
         updateLikes={updateLikes} />
