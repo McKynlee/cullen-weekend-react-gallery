@@ -8,15 +8,16 @@ const pool = require('../modules/pool');
 // PUT Route
 router.put('/like/:id/:likes', (req, res) => {
   console.log('req.params:', req.params);
-  console.log('req.body:', req.body);
+  // console.log('req.body:', req.body);
 
   const galleryId = req.params.id;
-  const newGalleryLikes = Number(req.params.likes + 1);
+  const newGalleryLikes = Number(req.params.likes) + 1;
 
   let sqlScript = `UPDATE "gallery"
-  SET "likes" = ${Number(newGalleryLikes)}
+  SET "likes" = ${newGalleryLikes}
   WHERE "id" = $1;`;
 
+  console.log('sqlScript:', sqlScript);
   // for (const galleryItem of galleryItems) {
   //   if (galleryItem.id == galleryId) {
   //     galleryItem.likes += 1;
