@@ -4,7 +4,7 @@
 }
 
 .App-header {
-  background-color: #222;
+  background-color: #413c69;
   padding: 1em;
   color: white;
 }
@@ -13,9 +13,23 @@
   font-size: 1.5em;
 }
 
-.container {
+.App-body {
+background-color: #a7c5eb;
+}
+
+.form-h2 {
+margin: 0px;
+padding: 10px;
+}
+
+.form-container {
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.list-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));
   grid-gap: 1px;
   justify-content: center;
@@ -26,29 +40,41 @@ img {
   max-width: 200px;
   max-height: 200px;
   padding: 10px;
-  border: 3px dotted blueviolet;
+  border: 3px dotted #4a47a3;
   border-radius: 10px;
 }
 
 .item-left-column {
-  background-color: aquamarine;
   grid-column: 1/2;
-  padding: 30px;
+  height: 300px;
+  /* padding: 30px; */
+
+}
+
+.item-middle-column {
+grid-column: 2/3;
+height: 300px;
+/* padding: 30px; */
 }
 
 .item-right-column {
-background-color: blueviolet;
-grid-column: 2/3;
-padding: 30px;
-border: 3px dotted aquamarine;
+  grid-column: 3/4;
+  height: 300px;
 }
 
 .button {
   border-radius: 5px;
+  margin: 0px 10px 0px 10px;
 }
 
 .item-like-btn {
-  background-color: green;
+  background-color: #709fb0;
+  color: #413c69;
+  border: 1px solid #413c69;
+}
+
+.item-like-btn:click {
+  border: 1px solid white;
 }
 
 .item-delete-btn {

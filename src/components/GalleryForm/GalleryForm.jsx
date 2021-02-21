@@ -9,8 +9,8 @@ function GalleryForm({ newPhotoDescription,
 }) {
   return (
     <div>
-      <h2>Add to the Gallery:</h2>
-      <form onSubmit={handleSubmit}>
+      <h2 className="form-h2">Add to the Gallery:</h2>
+      <form onSubmit={handleSubmit} className="form-container">
         <label>Text description of photo:
           <input type="text"
             value={newPhotoDescription}

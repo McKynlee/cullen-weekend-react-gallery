@@ -84,18 +84,20 @@ function App() {
       <header className="App-header">
         <h1 className="App-title">Gallery of My Life</h1>
       </header>
-      <GalleryForm
-        newPhotoDescription={newPhotoDescription}
-        setNewPhotoDescription={setNewPhotoDescription}
-        newPhotoURL={newPhotoURL}
-        setNewPhotoURL={setNewPhotoURL}
-        handleSubmit={handleSubmit}
-      />
-      <GalleryList
-        galleryList={galleryList}
-        updateLikes={updateLikes}
-        deleteFromGallery={deleteFromGallery}
-      />
+      <section className="App-body">
+        <GalleryForm
+          newPhotoDescription={newPhotoDescription}
+          setNewPhotoDescription={setNewPhotoDescription}
+          newPhotoURL={newPhotoURL}
+          setNewPhotoURL={setNewPhotoURL}
+          handleSubmit={handleSubmit}
+        />
+        <GalleryList
+          galleryList={galleryList}
+          updateLikes={updateLikes}
+          deleteFromGallery={deleteFromGallery}
+        />
+      </section>
     </div>
   );
 }
