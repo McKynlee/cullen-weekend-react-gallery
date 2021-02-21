@@ -8,15 +8,7 @@ import DisplayDescription from '../Display/DisplayDescription';
 
 // Material-UI
 import Button from '@material-ui/core/Button';
-// import { makeStyles } from '@material-ui/core/styles';
 // import DeleteIcon from '@material-ui/icons/Delete';
-
-// Material-UI variables:
-// const useStyles = makeStyles((theme) => ({
-//   button: {
-//     margin: theme.spacing(1),
-//   },
-// }));
 
 function GalleryItem({ photo, updateLikes, deleteFromGallery }) {
   // const [likes, setLikes] = useState(0);
@@ -48,13 +40,15 @@ function GalleryItem({ photo, updateLikes, deleteFromGallery }) {
           )}
       </div>
       <div>
-        <button className="item-like-btn button"
+        <Button
+          variant="contained"
+          color="primary"
           onClick={() => {
-            // setLikes(likes + 1);
             updateLikes(photo.id, photo.likes);
-          }} >
+          }}
+        >
           {heart} Likes: {photo.likes}
-        </button>
+        </Button>
         <Button
           variant="contained"
           color="secondary"
