@@ -3,7 +3,7 @@ import React from 'react';
 
 function DisplayPhoto({ photo }) {
   return (
-    <div>
+    <div className="display-center">
       <img src={photo.path} alt={photo.description} />
     </div>
   )

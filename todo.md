@@ -7,11 +7,11 @@
 - [x] Pass gallery data from App via props into GalleryList
 - [x] .map() list of gallery data
 - [x] Create GalleryItems to send single image rendering to GalleryList.
----------- [] click image to toggle btwn image and description (conditional rendering)
+---------- [x] click image to toggle btwn image and description (conditional rendering)
 ---------- [x] Like button
 ---------- [x] Accumulate likes (useState)
 ---------- [x] Axios PUT the like count /gallery/like/:id
----------- [] Update gallery each time smthg is liked
+---------- [x] Update gallery each time smthg is liked
 
 
 ## Server
@@ -21,9 +21,17 @@
 - [x] PUT endpoint
 
 ## STRETCH
-- [] Use git branching
-- [] feature-db: move your data into react_gallery db and include database.sql file
+- [x] Use git branching
+- [x] feature-db: 
+-----[x] move your data into react_gallery db and include database.sql file
+-----[x] create pool.js to bring in db
+-----[x] Write pool.query for get endpoints
+-----[x] Write pool.query for put endpoints
+-----[x] GET likes from db
+
 - [] feature-form: create form that allows user to POST new gallery item (use absolute URL for img) 
+
 - [] feature-delete: add ability to delete item (add button rendering to GalleryItems)
+
 - [] Material UI styling
 - [] Implement uppy for image upload

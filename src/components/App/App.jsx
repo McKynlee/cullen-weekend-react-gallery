@@ -29,8 +29,8 @@ function App() {
       })
   } //end getGallery
 
-  const updateLikes = (galleryId) => {
-    axios.put(`/gallery/like/${galleryId}`)
+  const updateLikes = (galleryId, photoLikes) => {
+    axios.put(`/gallery/like/${galleryId}/${photoLikes}`)
       .then(response => {
         console.log('PUT response:', response);
         getGallery();
