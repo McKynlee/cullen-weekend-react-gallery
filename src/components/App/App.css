@@ -4,7 +4,7 @@
 }
 
 .App-header {
-  background-color: #222;
+  background-color: #413c69;
   padding: 1em;
   color: white;
 }
@@ -13,42 +13,81 @@
   font-size: 1.5em;
 }
 
-.container {
+.App-body {
+background-color: #a7c5eb;
+color: #413c69;
+}
+
+.form-h2 {
+margin: 0px;
+padding: 10px;
+}
+
+.form-container {
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.form-input {
+  margin: 0px 10px;
+  border-radius: 5px;
+}
+
+.form-label {
+  margin-left: 40px;
+}
+
+.list-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));
   grid-gap: 1px;
   justify-content: center;
   align-items: center;
 }
 
+.item-left-column {
+  grid-column: 1/2;
+  height: 250px;
+}
+
+.item-middle-column {
+grid-column: 2/3;
+height: 250px;
+}
+
+.item-right-column {
+  grid-column: 3/4;
+  height: 250px;
+}
+
 img {
   max-width: 200px;
   max-height: 200px;
   padding: 10px;
-  border: 3px dotted blueviolet;
+  border: 3px dotted #4a47a3;
   border-radius: 10px;
 }
 
-.item-left-column {
-  background-color: aquamarine;
-  grid-column: 1/2;
-  padding: 30px;
-}
-
-.item-right-column {
-background-color: blueviolet;
-grid-column: 2/3;
-padding: 30px;
-border: 3px dotted aquamarine;
+.display-description {
+  height: 150px;
+  border: 3px dotted #4a47a3;
+  border-radius: 10px;
 }
 
 .button {
   border-radius: 5px;
+  margin: 0px 10px 0px 10px;
 }
 
 .item-like-btn {
-  background-color: green;
+  background-color: #413c69;
+  color: white;
+  border: 1px solid #413c69;
+}
+
+.item-like-btn:click {
+  border: 1px solid white;
 }
 
 .item-delete-btn {

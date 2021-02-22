@@ -13,6 +13,8 @@ function GalleryItem({ photo, updateLikes, deleteFromGallery }) {
   let heart = '<3';
   let idEven = "item-left-column";
   if (photo.id % 2 === 0) {
+    idEven = "item-middle-column";
+  } else if (photo.id % 3 === 0) {
     idEven = "item-right-column";
   }
 
@@ -38,7 +40,6 @@ function GalleryItem({ photo, updateLikes, deleteFromGallery }) {
       <div>
         <button className="item-like-btn button"
           onClick={() => {
-            // setLikes(likes + 1);
             updateLikes(photo.id, photo.likes);
           }} >
           {heart} Likes: {photo.likes}
@@ -46,7 +47,7 @@ function GalleryItem({ photo, updateLikes, deleteFromGallery }) {
         <button className="item-delete-btn button"
           key={photo.id}
           onClick={() => deleteFromGallery(photo.id)}>
-          DELETE from Gallery
+          DELETE
         </button>
       </div >
     </div >
