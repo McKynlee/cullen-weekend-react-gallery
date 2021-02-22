@@ -1,6 +1,6 @@
 # To-Do
 
-- [] Update README 
+- [x] Update README 
 
 ## Client
 - [x] Axios GET data from /gallery into App.jsx

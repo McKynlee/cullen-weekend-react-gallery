@@ -2,6 +2,12 @@
 import { Typography } from '@material-ui/core';
 import React from 'react';
 
+// Material-UI
+import {
+  TextField,
+  Button,
+} from '@material-ui/core';
+
 function GalleryForm({ newPhotoDescription,
   setNewPhotoDescription,
   newPhotoURL,
@@ -16,21 +22,22 @@ function GalleryForm({ newPhotoDescription,
         Add to the Gallery:
       </Typography>
       <form onSubmit={handleSubmit}>
-        <label>Text description of photo:
-          <input type="text"
-            value={newPhotoDescription}
-            onChange={event => {
-              setNewPhotoDescription(event.target.value)
-            }} />
-        </label>
-        <label>Photo absolute URL:
-          <input type="text"
-            value={newPhotoURL}
-            onChange={event => {
-              setNewPhotoURL(event.target.value)
-            }} />
-        </label>
-        <button>SUBMIT</button>
+        <TextField label="Description of photo:"
+          value={newPhotoDescription}
+          onChange={event => {
+            setNewPhotoDescription(event.target.value)
+          }} />
+        <TextField label="Photo URL:"
+          value={newPhotoURL}
+          onChange={event => {
+            setNewPhotoURL(event.target.value)
+          }} />
+        <Button
+          variant="contained"
+          color="default"
+        >
+          SUBMIT
+          </Button>
       </form>
     </div>
   );
