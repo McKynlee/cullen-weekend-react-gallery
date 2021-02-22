@@ -1,12 +1,37 @@
 // Fixing "React not in scope" error:
 import React from 'react';
+import { useState } from 'react';
+import axios from 'axios';
 
-function GalleryForm({ newPhotoDescription,
-  setNewPhotoDescription,
-  newPhotoURL,
-  setNewPhotoURL,
-  handleSubmit
-}) {
+function GalleryForm() {
+  // useStates for input variables:
+  const [newPhotoDescription, setNewPhotoDescription] = useState('');
+  const [newPhotoURL, setNewPhotoURL] = useState('');
+
+  // handle posting new information once form is submitted:
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    // console.log('in handleSubmit');
+    // console.log('event:', event);
+
+    axios.post('/gallery', {
+      path: newPhotoURL,
+      description: newPhotoDescription,
+      likes: 0
+    })
+      .then(response => {
+        console.log('POST response:', response);
+        getGallery();
+        setNewPhotoURL('');
+        setNewPhotoDescription('');
+      })
+      .catch(error => {
+        console.log('error POSTing new photo:', error);
+        alert('Error posting new photo.')
+      })
+  } //end handleSubmit
+
   return (
     <div>
       <h2 className="form-h2">Add to the Gallery:</h2>
@@ -27,7 +52,7 @@ function GalleryForm({ newPhotoDescription,
               setNewPhotoURL(event.target.value)
             }} />
         </label>
-        <button>SUBMIT</button>
+        <button>Add Image</button>
       </form>
     </div>
   );

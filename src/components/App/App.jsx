@@ -11,8 +11,6 @@ import axios from 'axios';
 
 function App() {
   const [galleryList, setGalleryList] = useState([]);
-  const [newPhotoDescription, setNewPhotoDescription] = useState('');
-  const [newPhotoURL, setNewPhotoURL] = useState('');
 
   // On page load, load gallery images:
   useEffect(() => {
@@ -30,29 +28,6 @@ function App() {
         alert('error GETting gallery')
       })
   } //end getGallery
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
-    // console.log('in handleSubmit');
-    // console.log('event:', event);
-
-    axios.post('/gallery', {
-      path: newPhotoURL,
-      description: newPhotoDescription,
-      likes: 0
-    })
-      .then(response => {
-        console.log('POST response:', response);
-        getGallery();
-        setNewPhotoURL('');
-        setNewPhotoDescription('');
-      })
-      .catch(error => {
-        console.log('error POSTing new photo:', error);
-        alert('Error posting new photo.')
-      })
-  } //end handleSubmit
 
   const updateLikes = (galleryId, photoLikes) => {
     axios.put(`/gallery/like/${galleryId}/${photoLikes}`)
@@ -85,13 +60,7 @@ function App() {
         <h1 className="App-title">Gallery of My Life</h1>
       </header>
       <section className="App-body">
-        <GalleryForm
-          newPhotoDescription={newPhotoDescription}
-          setNewPhotoDescription={setNewPhotoDescription}
-          newPhotoURL={newPhotoURL}
-          setNewPhotoURL={setNewPhotoURL}
-          handleSubmit={handleSubmit}
-        />
+        <GalleryForm />
         <GalleryList
           galleryList={galleryList}
           updateLikes={updateLikes}
