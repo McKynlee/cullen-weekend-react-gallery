@@ -15,7 +15,9 @@ Here is a view of the gallery with a few personal photos saved to the database:
 
 ![Initial Gallery View](./wireframes/GalleryPhotos.png)
 
- A user may add photos by typing a description of the photo in the text box on the left, and input the URL of the image in the text box on the right.  Each time the "like" button is clicked beneath a photo, the likes accumulate and are stored in the database.  An item may be removed from the database altogether by clicking the 'DELETE' button underneath it.  To see the worded description of any given photo, the user simply needs to click on the photo.  To return to seeing the photo, the user will click on the worded description:
+
+ A user may add photos by typing a description of the photo in the text box on the left, and input the URL of the image in the text box on the right, then click SUBMIT.  Each time the "like" button is clicked beneath a photo, the likes accumulate and are stored in the database.  An item may be removed from the database altogether by clicking the 'DELETE' button underneath it.  To see the worded description of any given photo, the user simply needs to click on the photo.  To return to seeing the photo, the user will click on the worded description:
+
 
 ![Galley View with Descriptions](./wireframes/GalleryDescription.png)
 
