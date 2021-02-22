@@ -1,6 +1,6 @@
 # To-Do
 
-- [] Update README 
+- [x] Update README 
 
 ## Client
 - [x] Axios GET data from /gallery into App.jsx
@@ -36,11 +36,11 @@
 -----[x] Router + Pool POST
 -----[x] Update DOM with new item
 
-- [] feature-delete: add ability to delete item 
+- [x] feature-delete: add ability to delete item 
 -----[x] Button
 -----[x] Delete function called on click
 -----[x] Axios DELETE
------[] Router + Pool DELETE
+-----[x] Router + Pool DELETE
 
-- [] Material UI styling
+- [kinda] Material UI styling
 - [] Implement uppy for image upload
