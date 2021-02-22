@@ -3,7 +3,7 @@ import React from 'react';
 import { useState } from 'react';
 import axios from 'axios';
 
-function GalleryForm() {
+function GalleryForm({ getGallery }) {
   // useStates for input variables:
   const [newPhotoDescription, setNewPhotoDescription] = useState('');
   const [newPhotoURL, setNewPhotoURL] = useState('');
