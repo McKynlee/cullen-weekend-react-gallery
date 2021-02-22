@@ -5,7 +5,7 @@ import GalleryItem from '../GalleryItem/GalleryItem';
 
 function GalleryList({ galleryList, updateLikes, deleteFromGallery }) {
   return (
-    <div className="container">
+    <div className="list-container">
       {galleryList.map(photo => {
         return <GalleryItem
           key={photo.id}

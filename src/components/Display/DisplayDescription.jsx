@@ -3,7 +3,7 @@ import React from 'react';
 
 function DisplayDescription({ photo }) {
   return (
-    <div className="display-center">{photo.description}</div>
+    <div className="display-description">{photo.description}</div>
   );
 } // end DisplayDescription
 
