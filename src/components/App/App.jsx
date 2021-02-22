@@ -7,6 +7,7 @@ import './App.css';
 // Material-UI
 import {
   Grid,
+  Typography,
 } from '@material-ui/core';
 
 // Import components:
@@ -87,7 +88,13 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1 className="App-title">Gallery of My Life</h1>
+        <Typography
+          variant="h3"
+          component="h1"
+          gutterBottom
+        >
+          Gallery of My Life
+        </Typography>
       </header>
       <Grid container>
         <Grid item xs={12} >

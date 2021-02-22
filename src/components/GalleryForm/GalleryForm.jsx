@@ -1,4 +1,5 @@
 // Fixing "React not in scope" error:
+import { Typography } from '@material-ui/core';
 import React from 'react';
 
 function GalleryForm({ newPhotoDescription,
@@ -9,7 +10,11 @@ function GalleryForm({ newPhotoDescription,
 }) {
   return (
     <div>
-      <h2>Add to the Gallery:</h2>
+      <Typography
+        variant="h5"
+        component="h2">
+        Add to the Gallery:
+      </Typography>
       <form onSubmit={handleSubmit}>
         <label>Text description of photo:
           <input type="text"

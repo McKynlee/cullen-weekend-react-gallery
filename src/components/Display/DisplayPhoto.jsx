@@ -1,11 +1,14 @@
 // Received "React not in scope" error, fixing:
 import React from 'react';
 
+// Material-UI
+import { Typography } from '@material-ui/core';
+
 function DisplayPhoto({ photo }) {
   return (
-    <div className="display-photo">
+    <Typography>
       <img src={photo.path} alt={photo.description} />
-    </div>
+    </Typography>
   )
 }
 
