@@ -12,14 +12,16 @@ function GalleryForm({ newPhotoDescription,
       <h2 className="form-h2">Add to the Gallery:</h2>
       <form onSubmit={handleSubmit} className="form-container">
         <label>Text description of photo:
-          <input type="text"
+          <input type="text" placeholder="Describe your photo"
+            className="form-input"
             value={newPhotoDescription}
             onChange={event => {
               setNewPhotoDescription(event.target.value)
             }} />
         </label>
-        <label>Photo absolute URL:
-          <input type="text"
+        <label className="form-label">Photo absolute URL:
+          <input type="text" placeholder="Photo URL - https://..."
+            className="form-input"
             value={newPhotoURL}
             onChange={event => {
               setNewPhotoURL(event.target.value)

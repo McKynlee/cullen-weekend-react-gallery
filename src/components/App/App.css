@@ -15,6 +15,7 @@
 
 .App-body {
 background-color: #a7c5eb;
+color: #413c69;
 }
 
 .form-h2 {
@@ -27,6 +28,15 @@ padding: 10px;
   padding: 5px;
 }
 
+.form-input {
+  margin: 0px 10px;
+  border-radius: 5px;
+}
+
+.form-label {
+  margin-left: 40px;
+}
+
 .list-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -34,6 +44,21 @@ padding: 10px;
   grid-gap: 1px;
   justify-content: center;
   align-items: center;
+}
+
+.item-left-column {
+  grid-column: 1/2;
+  height: 250px;
+}
+
+.item-middle-column {
+grid-column: 2/3;
+height: 250px;
+}
+
+.item-right-column {
+  grid-column: 3/4;
+  height: 250px;
 }
 
 img {
@@ -44,22 +69,10 @@ img {
   border-radius: 10px;
 }
 
-.item-left-column {
-  grid-column: 1/2;
-  height: 300px;
-  /* padding: 30px; */
-
-}
-
-.item-middle-column {
-grid-column: 2/3;
-height: 300px;
-/* padding: 30px; */
-}
-
-.item-right-column {
-  grid-column: 3/4;
-  height: 300px;
+.display-description {
+  height: 150px;
+  border: 3px dotted #4a47a3;
+  border-radius: 10px;
 }
 
 .button {
@@ -68,8 +81,8 @@ height: 300px;
 }
 
 .item-like-btn {
-  background-color: #709fb0;
-  color: #413c69;
+  background-color: #413c69;
+  color: white;
   border: 1px solid #413c69;
 }
 
